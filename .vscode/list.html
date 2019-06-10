@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>list-html</title>
+    <style>
+        .header{
+            color:crimson;
+        }
+        .sub{
+            color: blue;
+        }
+        
+        .sub_box {
+            border: 3px solid coral;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="header">목록을 만드는 태그</h3>
+
+    <h3 class="sub">ul, li 태그 - 순서 없는 목록 만들기</h3>
+    <div class="sub_box">
+        <p>순서가 없기 때문에 맨 앞에 숫자가 아닌 불릿이 붙음</p>
+        <p>HTML4까지는 li태그의 type속성에서 불릿을 바꿔줬지만 이제는 CSS의 list-style-type으로 변경할 수 있음</p>
+        <ul>
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </div>
+
+    <h3 class="sub">ol, li 태그 - 순서 있는 목록 만들기</h3>
+    <div class="sub_box">
+        <p>type은 기본 숫자, a, A, i, I(로마자)이 있음</p>
+        <ol >
+            <li>default1</li>
+            <li>default2</li>
+            <li>default3</li> 
+        </ol>
+        <ol type="a">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li> 
+        </ol>
+        <ol type="i">
+            <li>i</li>
+            <li>ii</li>
+            <li>iii</li> 
+        </ol>
+    </div>
+    
+    <h3 class="sub">dl, dt, dd 태그 - 설명 목록 만들기</h3>
+    <div class="sub_box">
+        <dl>
+            <dt>제목(dt태그)</dt>
+            <dd>내용(dd태그)</dd>
+        </dl>
+    </div>
+</body>
+</html>
