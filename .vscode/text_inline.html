@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .header{
+            color:crimson;
+        }
+        .sub{
+            color: blue;
+        }
+        
+        .sub_box {
+            border: 3px solid coral;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">텍스트와 관련된 inline 태그</h1>
+
+    <h3 class="sub">b, string - 텍스트를 굵게 표시하는 태그</h3>
+    <div class="sub_box">
+        <strong>strong으로 굵게 표시 (화면 낭독기 o)</strong><br>
+        <b>b(bold)로 굵게 표시 (화면 낭독기 x)</b><br>
+    </div>
+    
+    <h3 class="sub">em, i - 텍스트를 이탤릭체로 표시하는 태그</h3>
+    <div class="sub_box">
+        <em>em으로 쓴 이탤릭체</em><br>
+        <i>i로 쓴 이탤릭체</i>
+    </div>
+
+    <h3 class="sub">q - 인용 내용 표시하기</h3>
+    <div class="sub_box">
+        <blockquote>blockqoute는 블록 태그, 들여쓰기 적용</blockquote>
+        <q>인용 내용 - "" 적용</q>
+        <p>q태그는 인라인 레벨 태그이기 때문에 줄이 바뀌지 않음</p>
+    </div>
+
+    <h3 class="sub">mark - 형광펜 효과 내기</h3>
+    <div class="sub_box">
+        <p>mark태그로 <mark>형광펜</mark>효과 내기</p>
+    </div>
+
+    <h3 class="sub">span 태그 - 줄바꿈 없이 영역 묶기</h3>
+    <div class="sub_box">
+        <p style="background-color: coral">줄바꿈 없이 영역 묶기<span> ★이것은 p태그 안에 있는 span 태그★</span></p>
+        <p>span 태그는 태그 자체로는 의미가 없지만 텍스트 단락 안에서 줄바꿈 없이 일부 텍스트만 묶어 스타일을 적용하려고 할 때 사용</p>
+    </div>
+
+    <h3 class="sub">ruby 태그 - 동아시아 글자 표시하기</h3>
+    <div class="sub_box">
+        <ruby>루비태그 내용<rt>주석</rt></ruby>
+    </div>
+
+    <h3 class="sub">기타 텍스트 관련 태그들</h3>
+    <div class="sub_box">
+        <h4>abbr 태그 - 약자 표시 (title 속성 있음)</h4>
+        <blockquote><abrr title="Internet of Things">IoT</abrr></blockquote>
+
+        <h4>cite 태그 - 웹 문서나 포스트에서 참고 내용 표시</h4>
+        <blockquote><cite>cite 태그</cite></blockquote>
+
+        <h4>code 태그 - 컴퓨터 인식을 위한 소스 코드</h4>
+        <blockquote><code>function codeMarkup(){}</code></blockquote>
+
+        <h4>kdb 태그 - 키보드 입력이나 음성 명령 같은 사용자 입력 내용</h4>
+        <blockquote>웹 화면을 다시 불러오려면 <kbd>F5</kbd>키를 누릅니다</blockquote>
+
+        <h4>small, sub(아래 첨자), sup(위 첨자)</h4>
+        <blockquote>정상 글씨 <small>작은 태그</small>  <sub>아래 첨자</sub>  <sup>위 첨자</sup></blockquote>
+
+        <h4>s(취소선), u(밑줄)</h4>
+        <blockquote><s>취소선</s> <u>밑줄</u></blockquote>
+    </div>
+
+    ★table - 표를 만들 때 사용하는 태그<br>
+    mark - 형광펜으로 텍스트를 그은 것처럼 표시하는 태그<br>
+    ★ul, ol, li - 목록을 만드는 태그<br>
+
+</body>
+</html>
