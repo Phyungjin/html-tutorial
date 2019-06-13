@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table-html</title>
+    <link rel="stylesheet" type="text/css" href="common_style.css">
+</head>
+<body>
+    <h1 class="header">표를 만드는 태그</h1>
+
+    <p>테이블은 웹 문서에서 자료를 정리할 때 자주 사용하는 요소</p>
+
+    <h3 class="sub">table, tr, th, td</h3>
+    <p>※th의 경우 셀에 굵은 글씨, 중앙 배치 적용</p>
+    <div class="sub_box">
+        <table border="1" width="100%">
+            <tr>
+                <th>제목</th>
+                <td>1행 2열 내용</td>
+                <td>1행 3열 내용</td>
+            </tr>
+            <tr>
+                <th>제목</th>
+                <td>2행 2열 내용</td>
+                <td>2행 3열 내용</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3 class="sub">colspan, rowspan</h3>
+    <p>행합치기(rowspan), 열합치기(colspan)</p>
+    <div class="sub_box">
+        <table border="1" width="100%">
+            <tr>
+                <th>제목</th>
+                <td>2열</td>
+                <td>3열</td>
+            </tr>
+            <tr>
+                <th rowspan="2">제목 행 합치기</th>
+                <td colspan="2">2,3열 합치기</td>
+            </tr>
+            <tr>
+                <td>2열</td>
+                <td>3열</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3 class="sub">caption 태그, figcaption 태그 - 표에 제목 붙이기</h3>
+    <div class="sub_box">
+        <p>
+            caption 태그는 table 태그 바로 다음 사용<br>
+            caption 안에는 다른 태그를 사용해 제목을 여러 줄로 표시하거나 텍스트를 꾸밀 수 있음
+        </p>
+
+        <table border="1" width="100%">
+            <caption><strong>캡션태그</strong><p>캡션태그 아래 p태그</p></caption>
+            <tr><th>제목</th><td>내용</td></tr>
+        </table>
+    </div><br>
+
+    <div class="sub_box">
+        <p>
+            figcaption 태그는 figure 태그와 figcaption 태그를 같이 사용<br>
+            가운데 정렬 되는 caption 태그와 달리 figcaption는 적용 안됨
+        </p>
+
+        <figure>
+            <figcaption>
+                <p>figcaption 표 위에</p>
+            </figcaption>
+            <table border="1" width="100%">
+                <tr>
+                    <th>제목</th>
+                    <td>내용</td>
+                </tr>
+            </table>
+            <figcaption>
+                <p>figcaption 표 아래에</p>
+            </figcaption>
+        </figure>
+    </div>
+
+    <h3 class="sub"> aria-describedby 속성</h3>
+    <div class="sub_box">
+        <p id="summary">화면 낭독기에서 표를 읽어줄 때 도움이 되도록 표 설명을 별도의 문장으로 작성한 후 table 속성과 연결</p>
+        <table border="1" aria-describedby="summary" width="100%">
+            <tr><th>제목</th><td>내용</td></tr>
+        </table>
+    </div>
+
+    <h3 class="sub">thead, tbody, tfoot - 표 구조 정의</h3>
+    <div class="sub_box">
+        <p>표의 구조를 정의하면 시각장애인들도 화면 낭독기를 통해 표의 구조를 쉽게 이해할 수 있음</p>
+        <p>CSS를 사용해 제목, 본문 등에 각각 다른 스타일을 적용할 수 있음</p>
+
+        <table border="1" width="100%">
+            <caption>제주특별자치도 학교현황</caption>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>학교수</th>
+                    <th>학급수</th>
+                    <th>학생수</th>
+                    <th>교원수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>유치원</th>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <th>초등학교</th>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>합계</th>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <h3 class="sub">col, colgroup - 여러 열 묶어 스타일 지정</h3>
+    <div class="sub_box">
+        <p>주의할 점은 col태그와 colgroup 태그는 caption 태그 뒤와 tr, td 태그 전에 사용해야 함</p>
+        <p>그리고 col태그의 갯수와 표의 열의 갯수가 같아야 함</p>
+
+        <table border="1" width="100%" height="100">
+            <caption>colgroup 연습</caption>
+            <colgroup>
+                <col>
+                <col span="2" style="background-color: blue;">
+                <col style="background-color: yellow;">
+            </colgroup>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+        </table>
+    </div>
+</body>
+</html>
